@@ -1,0 +1,75 @@
+
+// 1. BRAND COLOURS---------------------------
+
+$brand-green    : green;
+$brand-red      : red;
+$brand-black    : lighten(black,5%);
+$brand-white    : #e6e6e6;
+
+
+// 2. USING BRAND COLOURS---------------------
+
+$c--primary     : $brand-green;
+$c--secondary   : $brand-red;
+$c--black       : $brand-black;
+$c--white       : $brand-white;
+
+
+// 3. THEME COLOURS---------------------------
+
+$buttons: (
+  (
+    
+    /* Class name: */                    "primary",
+    /* Background colour: */             $c--primary,
+    /* Text colour: */                   #ffffff,
+
+    /* HOVER -- background colour: */    darken($c--primary,10%),
+    /* HOVER -- text colour: */          #FFFFFF
+    
+   ),
+  (
+    
+    /* Class name: */                    "secondary",
+    /* Background colour: */             $c--black,
+    /* Text colour: */                   $c--white,
+
+    /* HOVER -- background colour: */    $c--white,
+    /* HOVER -- text colour: */          $c--black
+
+   )
+);
+
+$bg: (
+  (
+    
+    /* Class name: */                    "red",
+    /* Background colour: */             red,
+    /* Text colour: */                   #000
+    
+   ),
+  (
+    
+    /* Class name: */                    "warning",
+    /* Background colour: */             #2F9ED8,
+    /* Text colour: */                   #2886B7
+
+   )
+);
+
+
+$font-base: 1em;
+$font-sizes: (
+    small: .8em,
+    medium: 1.4em,
+    large: 1.6em,
+    x-large: 1.8em,
+    xx-large: 2.0em
+);
+
+  
+
+
+
+
+

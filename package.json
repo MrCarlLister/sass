@@ -1,0 +1,26 @@
+{
+  "name": "sass-framework",
+  "version": "1.0.0",
+  "description": "Sass framework and folder structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrCarlLister/sass.git"
+  },
+  "author": "Carl Lister",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrCarlLister/sass/issues"
+  },
+  "homepage": "https://github.com/MrCarlLister/sass#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglifycss": "^1.1.0",
+    "normalize.css": "^8.0.0"
+  },
+  "dependencies": {}
+}

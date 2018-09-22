@@ -1,0 +1,70 @@
+/**
+* BG Colours
+*/
+
+// @each $color-key, $color-value in $colors {
+//   @each $tone-key, $tone-value in $color-value {
+//     @if $tone-key == base {
+//       .bg--#{$color-key} {
+//         background-color: $tone-value !important;
+//       }
+//     } @else {
+//       .bg--#{$color-key}-#{$tone-key} {
+//         background-color: $tone-value !important;
+//       }
+//     }
+//   }
+// }
+
+
+/**
+* BTN Colours
+*/
+
+
+// @each $color-key, $color-value in $xtns {
+//   @each $tone-key, $tone-value in $color-value {
+//     @if $tone-key == base {
+//       .#{$color-key} {
+//         background-color: $tone-value !important;
+//       }
+//     } @else {
+//       .#{$color-key}--#{$tone-key} {
+//         background-color: $tone-value !important;
+//       }
+//     }
+//   }
+// }
+
+
+// Buttons
+
+// Generate Button Modifiers 
+@each $x in $buttons {
+  .btn--#{nth($x,1)} {
+    background-color: #{nth($x,2)};
+    color: #{nth($x,3)};
+    &:hover
+    {
+      background-color: #{nth($x,4)};
+      color: #{nth($x,5)};
+    }
+  }
+}
+
+// Generate Button Modifiers 
+@each $x in $bg {
+  .bg--#{nth($x,1)} {
+    background-color: #{nth($x,2)};
+    color: #{nth($x,3)};
+  }
+}
+
+// Base Button
+.btn {
+  display: inline-block;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  font-family: sans-serif;
+}
