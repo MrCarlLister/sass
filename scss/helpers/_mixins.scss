@@ -1,45 +1,6 @@
-/**
-* BG Colours
-*/
-
-// @each $color-key, $color-value in $colors {
-//   @each $tone-key, $tone-value in $color-value {
-//     @if $tone-key == base {
-//       .bg--#{$color-key} {
-//         background-color: $tone-value !important;
-//       }
-//     } @else {
-//       .bg--#{$color-key}-#{$tone-key} {
-//         background-color: $tone-value !important;
-//       }
-//     }
-//   }
-// }
-
-
-/**
-* BTN Colours
-*/
-
-
-// @each $color-key, $color-value in $xtns {
-//   @each $tone-key, $tone-value in $color-value {
-//     @if $tone-key == base {
-//       .#{$color-key} {
-//         background-color: $tone-value !important;
-//       }
-//     } @else {
-//       .#{$color-key}--#{$tone-key} {
-//         background-color: $tone-value !important;
-//       }
-//     }
-//   }
-// }
-
-
 // Buttons
 
-// Generate Button Modifiers 
+// Generate Button Classes 
 @each $x in $buttons {
   .btn--#{nth($x,1)} {
     background-color: #{nth($x,2)};
@@ -52,7 +13,7 @@
   }
 }
 
-// Generate Button Modifiers 
+// Generate Background Classes 
 @each $x in $bg {
   .bg--#{nth($x,1)} {
     background-color: #{nth($x,2)};
@@ -60,11 +21,24 @@
   }
 }
 
-// Base Button
-.btn {
-  display: inline-block;
-  border: 1px solid transparent;
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  font-family: sans-serif;
+// Font px and rem calc
+// Usage: @include font-size(14px)
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+/// Mixin to manage responsive breakpoints
+
+@mixin breakpoint($map) {
+  $query: "";
+  @if map-has-key($map, min) { $query: append($query, "min-width: #{map-get($map, min)}") }
+  @if map-has-key($map, min) and map-has-key($map, max) { $query: append($query, ") and (") }
+  @if map-has-key($map, max) { $query: append($query, "max-width: #{map-get($map, max)}") }
+  @media screen and (#{$query}) { @content; }
 }

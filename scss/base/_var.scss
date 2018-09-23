@@ -1,5 +1,5 @@
 
-// 1. BRAND COLOURS---------------------------
+// 1.0 BRAND COLOURS---------------------------
 
 $brand-green    : green;
 $brand-red      : red;
@@ -7,15 +7,15 @@ $brand-black    : lighten(black,5%);
 $brand-white    : #e6e6e6;
 
 
-// 2. USING BRAND COLOURS---------------------
+// ----1.1. USING BRAND COLOURS-----------------
 
-$c--primary     : $brand-green;
-$c--secondary   : $brand-red;
-$c--black       : $brand-black;
-$c--white       : $brand-white;
+$c--primary     : $brand-green !default;
+$c--secondary   : $brand-red !default;
+$c--black       : $brand-black !default;
+$c--white       : $brand-white !default;
 
 
-// 3. THEME COLOURS---------------------------
+// ----1.2. THEME COLOURS-----------------------
 
 $buttons: (
   (
@@ -58,16 +58,30 @@ $bg: (
 );
 
 
-$font-base: 1em;
-$font-sizes: (
-    small: .8em,
-    medium: 1.4em,
-    large: 1.6em,
-    x-large: 1.8em,
-    xx-large: 2.0em
-);
+// 2.0 FONTS-----------------------------------
 
-  
+$font-base: 16px !default;
+$font-sizes: (
+    xs: .7em,
+    sm: .9em,
+    lg: 1.2em,
+    xl: 1.4em,
+    xxl: 1.7em
+) !default;
+
+
+// 3.0 BREAKPOINTS-----------------------------
+
+$xs: ( max:  767px )!default;
+$sm: ( min:  768px )!default;
+$md: ( min:  992px )!default;
+$lg: ( min: 1200px )!default;
+$xl: ( min: 1440px )!default;
+$sm-only: ( min: map-get($sm, min), max: map-get($md, min) - 1 )!default;
+$md-only: ( min: map-get($md, min), max: map-get($lg, min) - 1 )!default;
+$lg-only: ( min: map-get($lg, min), max: map-get($xl, min) - 1 )!default;
+
+
 
 
 
