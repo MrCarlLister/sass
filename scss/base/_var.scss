@@ -15,7 +15,7 @@ $c--black       : $brand-black !default;
 $c--white       : $brand-white !default;
 
 
-// ----1.2. THEME COLOURS-----------------------
+// 2.0 BUTTONS----------------------------------
 
 $buttons: (
   (
@@ -40,6 +40,8 @@ $buttons: (
    )
 );
 
+// 3.0 BUTTONS----------------------------------
+
 $bg: (
   (
     
@@ -58,7 +60,7 @@ $bg: (
 );
 
 
-// 2.0 FONTS-----------------------------------
+// 4.0 FONTS-----------------------------------
 
 $font-base: 16px !default;
 $font-sizes: (
@@ -69,18 +71,37 @@ $font-sizes: (
     xxl: 1.7em
 ) !default;
 
+$font-base--line-height: 19px !default;
 
-// 3.0 BREAKPOINTS-----------------------------
+
+$h1-base: 60px !default;
+$h2-base: 48px !default;
+$h3-base: 40px !default;
+$h4-base: 30px !default;
+$h5-base: 24px !default;
+
+$header--line-height: 1.3em !default;
+
+
+// 5.0 BREAKPOINTS-----------------------------
 
 $xs: ( max:  767px )!default;
 $sm: ( min:  768px )!default;
 $md: ( min:  992px )!default;
 $lg: ( min: 1200px )!default;
 $xl: ( min: 1440px )!default;
+
 $sm-only: ( min: map-get($sm, min), max: map-get($md, min) - 1 )!default;
 $md-only: ( min: map-get($md, min), max: map-get($lg, min) - 1 )!default;
 $lg-only: ( min: map-get($lg, min), max: map-get($xl, min) - 1 )!default;
 
+
+// 6.0 Spacing---------------------------------
+
+$max-width: 1040px !default;
+
+$element-spacing:1.2rem !default;
+$section-spacing:$element-spacing*2.5 !default;
 
 
 

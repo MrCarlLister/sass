@@ -1,3 +1,4 @@
 *.code-workspace
 /css
 /node_modules
+*.html

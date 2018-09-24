@@ -1,0 +1,11 @@
+.section:not(:first-child)
+{
+    margin:$section-spacing 0 0;
+
+}
+
+.container
+{
+    max-width:$max-width;
+    margin:0 auto;
+}

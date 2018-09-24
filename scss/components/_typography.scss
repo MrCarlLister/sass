@@ -3,9 +3,41 @@ body
 {
 
   @include font-size($font-base);
-  @include breakpoint($lg-only){
-    background-color:red;
-  }
   
 }
-  
+
+h1,h2,h3,h4,h5,p,ul,ol
+{
+  margin-bottom:$element-spacing;
+  margin-top:0;
+}
+
+h1,h2,h3,h4,h5
+{
+  line-height: $header--line-height;
+}
+
+h1
+{
+  @include font-size($h1-base);
+}
+
+h2
+{
+  @include font-size($h2-base);
+}
+
+h3
+{
+  @include font-size($h3-base);
+}
+
+h4
+{
+  @include font-size($h4-base);
+}
+
+h5
+{
+  @include font-size($h5-base);
+}
